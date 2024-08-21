@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class=" js no-mobile desktop no-ie ff ff59 web-presentation-section w-1120 gt-240 gt-320 gt-480 gt-640 gt-768 gt-800 gt-1024 lt-1280 lt-1440 lt-1680 lt-1920 no-portrait landscape gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius no-cssreflections csstransforms csstransitions no-touch no-retina fontface domloaded" id="index-page" lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+
+  <title>Interactive Presentation</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+  <meta name="author" content="Hakim El Hattab">
+
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <link rel="stylesheet" href="Interactive%20Presentation_files/reveal.css">
+  <link rel="stylesheet" href="Interactive%20Presentation_files/black.css" id="theme">
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="Interactive%20Presentation_files/zenburn.css">
+
+  <!-- Printing and PDF exports -->
+  <script type="text/javascript" async="" src="Interactive%20Presentation_files/analytics.js"></script><script>
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  </script><link rel="stylesheet" type="text/css" href="Interactive%20Presentation_files/paper.css">
+
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->
+  
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async="" src="Interactive%20Presentation_files/js.js"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-61981167-2');
+  </script><script type="text/javascript" src="Interactive%20Presentation_files/highlight.html"></script><script type="text/javascript" src="Interactive%20Presentation_files/zoom.html"></script><script type="text/javascript" src="Interactive%20Presentation_files/notes.html"></script>
+
+
+</head>
+	<body>
+    <div class="reveal slide center ready" role="application" data-transition-speed="default" data-background-transition="fade">
+        <div class="slides" style="width: 960px; height: 700px; left: 50%; top: 50%; bottom: auto; right: auto; transform: translate(-50%, -50%) scale(0.862629);">
+            <section style="top: 0px; display: block;" class="stack present">
+                <section style="top: 279.5px; display: block;" class="present">
+                    <h2 id="welcome">Elvis and the Spaceship Operator</h2>
+                </section>
+            </section>
+			<section style="top: 0px; display: block;" aria-hidden="true" class="stack future" hidden="">
+				<section style="top: 242.5px; display: block;">
+                    <h2 id="chapter-1">Chapter 1</h2>
+                    <p>Chapter 1.1</p>
+                    <p>Operator Review</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 170px; display: block;">
+                    <p>Chapter 1.2</p>
+                    <Code>
+                        <ul>
+                            <li>=<pre></pre>
+                            </li>
+                            <li>+=<pre>$a = $a + 1;</pre>
+                            </li>
+                            <li>-=<pre>$a = $a - 1</pre>
+                            </li>
+                            <li>*=<pre>$a = $a * 1</pre>
+                            </li>
+                            <li>/=<pre>$a = $a / 1;</pre>
+                            </li>
+                        </ul>
+                    </Code>
+                </section>
+			</section>
+			<!-- Chapter 2 -->
+            <section style="top: 0px; display: block;" aria-hidden="true" class="stack future" hidden="">
+				<section style="top: 30px; display: block;">
+                        <h2 id="chapter-2">Chapter 2</h2>
+                        <p>Ternary and Null Checking</p>
+                </section>
+                <section class="future" aria-hidden="true" style="top: 350px; display: none;">
+					<p>Most Operators are Binary. Add adds two numbers...</p>
+					<p>While ternary operators operate on three<p>
+                    <code><pre>echo ( $mightBeTrue ? "true" : "false" );</pre></code>
+                    <code><pre>$a = $mightBeTrue === true ? "true" : "false" ;</pre></code>
+                    <code><pre>$a = $mightBeTrue === null ? null : "Object is null" ;</pre></code>
+                    <Code>
+                        <pre>$output = $obj == null ? "Object Can't String" : obj.ToString();</pre>
+                    </code>
+                    <p>OK, So the "Ternary" operator is an if statement... </p>
+                </section>
+				<section class="future" aria-hidden="true" style="top: 350px; display: none;">
+                    
+                    <p>Say we except the data</p>
+                    <code>
+                        <pre>subscription: {    
+    items: {
+        data: [
+            plan: {
+                id: 'my_plan_id'
+            }
+        ]
+    }
+}
+                    </pre>
+                    </code>
+                    <p>We can get the value of the ID </p>
+                    <code>
+                    <pre>$value = $subscription->items->data->plan->id. 
+                    </pre>
+                    </code>
+                    
+                </section>
+				<section class="future" aria-hidden="true" style="top: 350px; display: none;">
+                    <p>Suppress errors using the exception stack..</p>
+                    <code><pre>string $value;
+try{ $subscription->items[0]->data->plan->id; }
+catch (Exception e){ $value = "Object Incomplete";}
+                    </pre>
+                    </code>
+                    <p>But this is a unnecessary use of try catch used in a preventable logic flow<p>
+                </section>
+				<section class="future" aria-hidden="true" style="top: 350px; display: none;">
+				<p> Lets explicitly null check, because using exceptions for program flow is a bad idea.</p>
+				<code><pre>
+string $value;
+if ( $subscription != null \
+    && $subscription->items != null 
+    && $subscription->items[0] 
+    && $subscription->items[0]->data != null 
+    && $subscription->items[0]->data->plan != null 
+    && $subscription->items[0]->data->plan->id != null){
+    $value = $subscription->items->data[]->plan->id; 
+}else {$value="Object Incomplete";</pre></code>
+                    <p>But null checking is ugly</p>
+                </section>
+				<section class="future" aria-hidden="true" style="top: 350px; display: none;">
+                    <p> Using a ternary for a single check is usefull<p>
+                    <Code>
+                        <pre>$output = $obj == null ? "Object Incomplete" : $obj;</pre>
+                    </code>
+                    <p>Chaining ternary operators a bad idea<p>
+                    <Code style="width:100%">
+                        <pre style="width:100%">$output = $subscription == null ? "Subscription Object Incomplete" 
+    : $subscription->items == null ? "Items Incomplete" 
+    : $subscription->items[0] == null ? "First Item Incomplete" 
+    : $subscription->items[0]->plan == null ? "Plan Incomplete" 
+    : $subscription->items[0]->plan->id == null ? "ID Incomplete" 
+    : $subscription->items[0]->plan->id;</pre>
+                    </code>
+                    
+				</section>
+				<section class="future" aria-hidden="true" style="top: 350px; display: none;">
+				
+                    <p>Null Coalescing Operator</p>
+                    <p>Supresses Trying to get property of non-objet error</p>
+                    
+                    <p>Null object returns null</p>
+                    <Code>
+                        <pre>$output = $obj ?? null
+                        </pre>
+                    </code>
+                    <Code>
+                        <pre>$output = $obj == null ? null : obj;
+                        </pre>
+                    </code>
+                    <p>Null object gets defaut value<p>
+                    <Code>
+                        <pre>$output = $obj ?? "Default Value"
+                        </pre>
+                    </code>
+                    <Code>
+                        <pre>$output = $obj == null ? "Default Value" : obj;
+                        </pre>
+                    </code>
+                </section>
+                
+				<section class="future" aria-hidden="true" style="top: 350px; display: none;">
+                    <p>Elvis Operator<p>
+                    <p>...behaves identical to the Null-Coalescing operator...</p>
+                    <p>When the variable itself is null.</p>
+                    <Code>
+<pre>
+$a = null;
+$out = $a ?? 'b'; // value is b
+$out = $a ?: 'b'; // value is b 
+$out = $c ?? 'b'; // value is b
+$out = $c ?: 'b'; // Error: Undefined Variable $c
+
+</pre>
+                    </Code>
+				</section>
+				
+				
+				<section class="future" aria-hidden="true" style="top: 350px; display: none;">
+                    <p>Other languages: C#<p>
+                    <p>uses a different syntax</p>
+                    <Code>
+<pre>
+var g1 = parent?.child?.child?.child;
+if (g1 != null) // TODO
+</pre>
+                    </Code>
+				</section>
+				
+            </section>
+            <section style="top: 350px; display: none;" aria-hidden="true" class="stack future" hidden="">
+                <section style="top: 350px; display: none;">
+                    <h3 id="enjoy">Spaceship Operator</h3>
+                    <p>Spoiler: its used for sorting</p>
+                    <p>Because it is a 3 way comparitor</p>
+                </section>
+                <section style="top: 350px; display: none;">
+                    <h3 id="enjoy">&lt;=&gt;</h3>
+                    <ul>
+                        <li>-1 if left less than right</li>
+                        <li>0 if left equal to right</li>
+                        <li>1 if left greater than right</li>
+                    </ul>
+                    <Code>
+                    <pre>$user_scores = [ 82 => [ 'score' => 1, 'time' => 6.442 ],
+34 => [ 'score' => 1, 'time' => 5.646 ],
+66 => [ 'score' => 3, 'time' => 1.554 ],
+7 => [ 'score' => 2, 'time' => 4.442 ],
+99 => [ 'score' => 4, 'time' => 3.646 ],
+55 => [ 'score' => 1, 'time' => 2.554 ]
+];
+
+uasort($user_scores,function($a,$b){
+    if($a['score'] == $b['score']){
+        return $a['time'] &lt;=&gt; $b['time'];
+    }
+    return $b['score'] &lt;=&gt; $a['score'];
+});
+                    </pre>
+                    </code>
+                </section>
+            </section>
+
+            <section style="top: 350px; display: none;" aria-hidden="true" class="stack future" hidden="">
+                <section style="top: 350px; display: none;">
+                    <h3 id="enjoy">Enjoy!</h3>
+                    <div class="highlighter-rouge">
+                        <div class="highlight">
+                            <pre class="highlight">
+                                <code>Created by: Paul Richeson
+                                Interactive Presentation Web Framework provided by 
+                                </code>
+                            </pre>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </div>
+    <div class="backgrounds">
+        <div class="slide-background stack present" style="display: block;" data-loaded="true">
+            <div class="slide-background present" style="display: block;" data-loaded="true">
+        
+        </div>
+    </div>
+    <div class="slide-background stack future" style="display: block;" data-loaded="true">
+    <div class="slide-background present" style="display: block;" data-loaded="true">
+    </div>
+    <div class="slide-background future" style="display: block;" data-loaded="true"></div>
+    <div class="slide-background future" style="display: none;"></div>
+    <div class="slide-background future" style="display: none;"></div>
+    <div class="slide-background future" style="display: none;"></div>
+    <div class="slide-background future" style="display: none;"></div>
+    <div class="slide-background future" style="display: none;"></div>
+    <div class="slide-background future" style="display: none;"></div>
+    <div class="slide-background future" style="display: none;"></div>
+    </div>
+    <div class="slide-background stack future" style="display: block;" data-loaded="true">
+    <div class="slide-background present" style="display: block;" data-loaded="true">
+    </div>
+    <div class="slide-background future" style="display: none;"></div>
+    <div class="slide-background future" style="display: none;"></div>
+    </div>
+    <div class="slide-background stack future" style="display: none;">
+    <div class="slide-background present" style="display: none;">
+    </div>
+    </div>
+    </div>
+    <div class="progress" style="display: block;">
+    <span style="width: 0px;">
+    </span>
+    </div>
+    <aside class="controls" style="display: block;">
+        <button class="navigate-left" aria-label="previous slide" disabled="disabled"></button>
+        <button class="navigate-right enabled" aria-label="next slide"></button>
+        <button class="navigate-up" aria-label="above slide" disabled="disabled"></button>
+        <button class="navigate-down" aria-label="below slide" disabled="disabled"></button>
+    </aside>
+    <div class="slide-number" style="display: none;"></div>
+    <div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div>
+    <div class="pause-overlay"></div>
+    <div style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);" id="aria-status-div" aria-live="polite" aria-atomic="true">Null Pattern.
+    </div>
+    </div>
+    <script src="Interactive%20Presentation_files/head.js"></script>
+    <script src="Interactive%20Presentation_files/reveal.js"></script>
+
+<script>
+
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+
+</script>
+
+
+	
+
+</body></html>
